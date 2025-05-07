@@ -56,8 +56,11 @@ class MLServer:
         """Runs the Flask server."""
         self.app.run(host=host, port=port)
 
+# Create MLServer instance and expose Flask app
+load_dotenv()
+api_key = os.getenv('API_KEY')
+server = MLServer(model_path='models/classification_model.pkl', api_key=api_key)
+app = server.app
+
 if __name__ == '__main__':
-    load_dotenv()
-    api_key = os.getenv('API_KEY')
-    server = MLServer(model_path='models/classification_model.pkl', api_key=api_key)
     server.run()
