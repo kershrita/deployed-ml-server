@@ -93,7 +93,7 @@ deployed-ml-server/
    - Or use Git:
 
      ```bash
-     git clone <repository-url> ~/deployed-ml-server
+     git clone https://github.com/kershrita/deployed-ml-server.git
      ```
 
 2. **Verify Files**:
@@ -109,14 +109,14 @@ deployed-ml-server/
 1. **Create and Activate venv**:
 
    ```bash
-   python3 -m venv ~/deployed-ml-server/venv
-   source ~/deployed-ml-server/venv/bin/activate
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
 2. **Install Dependencies**:
 
    ```bash
-   pip install -r ~/deployed-ml-server/requirements.txt
+   pip install -r requirements.txt
    ```
 
    - Includes `flask`, `pandas`, `numpy`, `scikit-learn`, `python-dotenv`, `gunicorn`.
@@ -132,7 +132,7 @@ deployed-ml-server/
 - Verify:
 
   ```bash
-  cat ~/deployed-ml-server/.env
+  cat .env
   ```
 
 ### Step 6: Train Model (If Needed)
